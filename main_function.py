@@ -52,8 +52,6 @@ try:
         OutputFileName = resultDir + '\\R_{0}{1}{2}.csv'.format(max(arrObjectID),className[0],strStamp)
         dictAttr = rand_sample(objectIDList = arrObjectID, class_name = className, sample_rate = 1)
         OverallUSE, OverallOSE, OverallBDI, OverallPDI, OverallAFI, OverallOL, OverallI, AFI, OL, I = thesis_segment_evaluation(featureName, intersect_area, *dictAttr)
-        print OverallBDI
-        print OverallPDI
         featurename = featureName.split('.')[0]
         if os.path.isfile(resultDir + '\\AFI{0}{1}{2}.pkl'.format(max(arrObjectID),className[0],strStamp)) and FIRSTIDENTIFY_NUM==0:
             dictAFIFile = open(resultDir + '\\AFI{0}{1}{2}.pkl'.format(max(arrObjectID),className[0],strStamp), 'rb')
